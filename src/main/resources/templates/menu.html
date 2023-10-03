@@ -3,13 +3,48 @@
 <head>
     <meta charset="UTF-8" />
     <title>Spa Menu</title>
-    <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" />
+<!--    <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" />-->
+    <link href="../static/styles.css" th:href="@{/styles.css}" rel="stylesheet" />
 </head>
 <body>
 <h1>My Super Fancy Spa</h1>
 <div id = "clientProfile">
+    <h2>My Profile</h2>
+    <p th:text = "${name}"></p>
+    <p th:text = "${skintype}"></p>
+    <p th:text = "${manipedi}"></p>
 </div>
 <div id = "servicesMenu">
+    <h2>Menu of Available Services</h2>
+    <h3>Facial Treatments</h3>
+    <p>The facial treatments below are recommended by our aestheticians for your given skin type.</p>
+    <table>
+        <th:block th:each="facial : ${appropriateFacials}">
+            <tr>
+                <td th:text="${facial}">...</td>
+            </tr>
+        </th:block>
+    </table>
+    <div th:if = "${manipedi.equals('manicure')}">
+        <h2>Manicure</h2>
+        <h3 th:replace = "~{fragments :: manicureDescription}"></h3>
+    </div>
+    <div th:if = "${manipedi.equals('pedicure')}">
+        <h2>Pedicure</h2>
+        <h3 th:replace = "~{fragments :: pedicureDescription}"></h3>
+    </div>
 </div>
 </body>
+<footer>
+    <div class="container">
+        <div class="grid">
+            <div class="cell" id="1"></div>
+            <div class="cell" id="2"></div>
+            <div class="cell" id="3"></div>
+            <div class="cell" id="4"></div>
+            <div class="cell" id="5"></div>
+            <div class="cell" id="6"></div>
+        </div>
+    </div>
+</footer>
 </html>

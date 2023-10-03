@@ -62,7 +62,11 @@ public class SpaDayController {
                 appropriateFacials.add(facials.get(i));
             }
         }
-
+        model.addAttribute("name" , name);
+        model.addAttribute("skintype", skintype);
+        model.addAttribute("facials", facials);
+        model.addAttribute("appropriateFacials", appropriateFacials);
+        model.addAttribute("manipedi", manipedi);
         return "menu";
     }
 }

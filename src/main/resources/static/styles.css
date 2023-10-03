@@ -2,7 +2,7 @@ body {
     background-color: pink;
 }
 
-div {
+div:not(.grid):not(.cell) {
     margin: auto;
     width: 50%;
     padding: 10px;
@@ -24,3 +24,45 @@ table {
             padding: 10px;
             text-align: center;
 }
+
+.container {
+display: grid;
+  place-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 80px);
+  grid-template-rows: repeat(1, 80px);
+    position:absolute;
+       bottom:0;
+}
+
+.cell {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+div#\31 {
+  background: #D9BCF2;
+}
+div#\32 {
+  background: #AED8F2;
+}
+div#\33 {
+  background: #F2DEA2;
+}
+div#\34 {
+  background: #F2CDC4;
+}
+div#\35 {
+  background: #A9B5D9;
+}
+div#\36 {
+  background: #F2A477;
+}
+
+
+
+

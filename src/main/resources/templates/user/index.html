@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th = "http://www.thymeleaf.org/">
 <head>
-  <meta charset="UTF-8">
-  <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" />
-  <title>Welcome</title>
+    <meta charset="UTF-8">
+    <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet" />
+    <title>Welcome</title>
 </head>
 <body>
 <p th:text = "'Welcome ' + ${user.username} + '!'"></p>
 <a th:href="@{/}">
-  Select your spa services here
+    Select your spa services here
 </a>
 </body>
 </html>
